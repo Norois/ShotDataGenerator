@@ -26,15 +26,6 @@ int main(){
     cout << "Input the first unused index nunber in your shot data\n";
     cin >> dataIndex;
 
-    /*bulletColumns = 5;
-    bulletRows = 1;
-    bulletX = 0;
-    bulletY = 0;
-    sizeX = 16;
-    sizeY = 16;
-    dataIndex = 1;*/
-
-
     currentTop = bulletY;
     currentBottom = sizeY - 1;
     for(int i = 0; i <= bulletRows - 1; i++){
