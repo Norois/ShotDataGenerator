@@ -43,21 +43,21 @@ class ShotDataGenerator{
 			if(comment.length() != 0){
 				outputFile << "// " << comment << std::endl;
 			}
-			this -> currentTop = this -> bulletY;
-		    this -> currentBottom = this -> sizeY - 1;
-		    for(int i = 0; i <= this -> bulletRows - 1; i++){
-		        for(int j = 0;j <= this -> bulletColumns - 1; j++){
-		            outputFile << "ShotData{\n    id = " << this -> dataIndex; this -> dataIndex ++;
-		            outputFile << "\n    rect = (" << this -> bulletX + (this -> sizeX * i) << ", " << this -> bulletY + this -> currentTop << ", " << this -> bulletX + (this -> sizeX * (i + 1)) - 1 << ", " << this -> currentBottom << " )\n";
-					if(this -> bulletHitX == 0 && this -> bulletHitY == 0){
-						outputFile << "    collision = " << this -> bulletHitSize << "\n";
+			currentTop = bulletY;
+		    currentBottom = sizeY - 1;
+		    for(int j = 0; j <= bulletRows - 1; j++){
+		        for(int  i = 0;i <= bulletColumns - 1; i++){
+		            outputFile << "ShotData{\n    id = " << dataIndex; dataIndex ++;
+		            outputFile << "\n    rect = (" << bulletX + (sizeX * i) << ", " << bulletY + currentTop << ", " << bulletX + (sizeX * (i + 1)) - 1 << ", " << currentBottom << " )\n";
+					if(bulletHitX == 0 && bulletHitY == 0){
+						outputFile << "    collision = " << bulletHitSize << "\n";
 					} else{
-		            	outputFile << "    collision = (" << this -> bulletHitSize << ", " << this -> bulletHitX << ", " << this -> bulletHitY << ")\n";
+		            	outputFile << "    collision = (" << bulletHitSize << ", " << bulletHitX << ", " << bulletHitY << ")\n";
 					}
 					outputFile << "}\n";
 		        }
-		        this -> currentTop += this -> sizeY;
-		        this -> currentBottom += this -> sizeY;
+		        currentTop += sizeY;
+		        currentBottom += sizeY;
 		    }
 		}
 
