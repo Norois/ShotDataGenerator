@@ -38,8 +38,6 @@ class ShotDataGenerator{
 				outputFile << delayRectDown << "," << delayRectDown << ")" << std::endl << std::endl;
 			}
 
-			
-
 			if(comment.length() != 0){
 				outputFile << "// " << comment << std::endl;
 			}
