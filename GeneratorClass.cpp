@@ -91,7 +91,7 @@ int main(){
 	    
 		std::cout << "Input the U offset of the hitbox, positive = down, negative = up, leave 0 if hitbox is in the middle\n";
 	    std::cin >> generator.bulletHitY;
-
+		
 	    std::cout << "Input the first unused index nunber in your shot data\n";
 	    std::cin >> generator.dataIndex;
 
@@ -104,24 +104,24 @@ int main(){
 		if(yes == "yes"){
 			generator.includeHead = true;
 
-			std::cout << "Input the directory of the shot image";
+			std::cout << "Input the directory of the shot image\n";
 			std::cin >> generator.shotImageDirectory;
 
 			// Delay Rect
-			std::cout << "Input the Top position of delay rect sprite";
+			std::cout << "Input the Top position of delay rect sprite\n";
 			std::cin >> generator.delayRectTop;
 
-			std::cout << "Input the Left position of delay rect sprite";
+			std::cout << "Input the Left position of delay rect sprite\n";
 			std::cin >> generator.delayRectLeft;
 
-			std::cout << "Input the Down position of delay rect sprite";
+			std::cout << "Input the Down position of delay rect sprite\n";
 			std::cin >> generator.delayRectDown;
-
-			std::cout << "Input the Right position of delay rect sprite";
+			
+			std::cout << "Input the Right position of delay rect sprite\n";
 			std::cin >> generator.delayRectRight;
 		} else{generator.includeHead = false;}
 
-		std::cout << "Optional comment to add before the shots, leave empty if no comment";
+		std::cout << "Optional comment to add before the shots, leave empty if no comment\n";
 		std::cin >> generator.comment;
 
 	    generator.generate();
